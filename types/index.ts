@@ -1,12 +1,14 @@
+import { Decimal } from "@prisma/client/runtime/library";
+
 export type ProductTypes = {
   name: string;
   slug: string;
   category: string;
   description: string;
   images: Array<string>;
-  price: number;
+  price: Decimal;
   brand: string;
-  rating: number;
+  rating: Decimal;
   numReviews: number;
   stock: number;
   isFeatured: boolean;

@@ -3,23 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import Rating from "./rating";
 import ProductPrice from "./product-price";
+import { ProductTypes } from "@/types";
 
-type ProductCard = {
-  name: string;
-  slug: string;
-  category: string;
-  description: string;
-  images: Array<string>;
-  price: number;
-  brand: string;
-  rating: number;
-  numReviews: number;
-  stock: number;
-  isFeatured: boolean;
-  banner: string | null;
-};
 
-const ProductCard = ({ product }: { product: ProductCard }) => {
+const ProductCard = ({ product }: { product: ProductTypes }) => {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader className="p-0 items-center">
