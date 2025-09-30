@@ -13,3 +13,11 @@ export const getLatestProducts = async () => {
   });
   return products;
 };
+
+export const getProductBySlug = async (slug: string) => {
+  // Implementation to fetch a product by its slug
+  const product = await prisma.product.findFirst({
+    where: { slug },
+  });
+  return product;
+}

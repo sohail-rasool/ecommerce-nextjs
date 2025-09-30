@@ -3,7 +3,7 @@ import ProductCard from "./productCard";
 
 type ProductListProps = {
   title: string;
-  data: Array<ProductTypes>;
+  data: ProductTypes[];
 };
 
 const ProductList = ({ title, data }: ProductListProps) => {

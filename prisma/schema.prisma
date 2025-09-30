@@ -21,12 +21,12 @@ model Product {
   category    String
   description String
   images      String[]
-  price       Decimal  @db.Decimal(10, 2)
+  price       Decimal  @default(0) @db.Decimal(10, 2)
   brand       String
-  rating      Decimal  @db.Decimal(2, 1)
-  numReviews  Int
+  rating      Decimal  @default(0) @db.Decimal(2, 1)
+  numReviews  Int      @default(0)
   stock       Int
   isFeatured  Boolean  @default(false)
   banner      String?
-  createdAt   DateTime @default(now())
+  createdAt   DateTime @default(now()) @db.Timestamp(6)
 }
